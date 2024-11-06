@@ -23,6 +23,13 @@ public class WebhookProcessorController {
         this.webhookService = webhookService;
     }
 
+    /**
+     * 웹훅 요청처리 API
+     * @param request
+     * @param webRequest
+     * @param requestBody
+     * @return
+     */
     @PostMapping(value ="/request")
     public ResponseEntity<ResponseDto> requestWebhook(
             HttpServletRequest request
