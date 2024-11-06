@@ -11,15 +11,14 @@ public class WebhookRequestDto {
     private String orderId;
     private String customerId;
     private String status;
-    private String message;
+
 
     public WebhookRequestDto() {}
     @Builder
-    public WebhookRequestDto(String orderId, String customerId, String status, String message) {
+    public WebhookRequestDto(String orderId, String customerId, String status) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.status = status;
-        this.message = message;
     }
 
     @Override
@@ -28,7 +27,6 @@ public class WebhookRequestDto {
                 .add("orderId='" + orderId +"'")
                 .add("customerId='" + customerId +"'")
                 .add("status='" + status +"'")
-                .add("message='" + message +"'")
                 .toString();
     }
 }
